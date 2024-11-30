@@ -6,8 +6,8 @@ const EditTask = () => {
     return (
         <div>
         <h2>Edit Task</h2>
-        <p>Task ID: {taskId}</p> 
-        <p>Here, you'll see a list of tasks to edit</p>   
+        <p>Task ID: {taskId} </p>
+        <p>Here, you'll view or edit the task details</p>
     </div>
     )
 };

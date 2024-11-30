@@ -4,9 +4,9 @@ import { useLocalStorage } from 'react-use';
 
 const AddTask = () => {
     const [title, setTitle] = useState('');
-    const [description, setDiscription] = useState('');
+    const [description, setDescription] = useState('');
 
-    const [tasks, setTasks] = useLocalStorage('Tasks', []);
+    const [tasks, setTasks] = useLocalStorage('tasks', []);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -20,8 +20,7 @@ const AddTask = () => {
 
         setTasks([...tasks, newTask]);
         navigate('/tasks');
-
-    }
+    };
 
     return (
         <div>
@@ -33,12 +32,12 @@ const AddTask = () => {
                 </div>
                 <div>
                     <label>Description: </label>
-                    <input value={description} onChange={(e) => setDiscription(e.target.value)} required />
+                    <input value={description} onChange={(e) => setDescription(e.target.value)} required />
                 </div>
                 <button type='submit'>Add Task</button>
             </form>
         </div>
     );
 }
-
+    
 export default AddTask;
